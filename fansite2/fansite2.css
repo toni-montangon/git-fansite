@@ -3,17 +3,17 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #f0f0f0;
 }
 
 header {
-    background-color: #5ce1e6;
+    background-color: rebeccapurple;
     color: white;
-    padding: 11px 0;
-    position: fixed;
+    padding: 10px 0;
     top: 0;
     width: 100%;
     z-index: 5;
+    position: fixed;
 }
 
 header nav {
@@ -37,12 +37,12 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: rgb(255, 75, 75);
+    color: orchid;
     transform: scale(1.1);
 }
 
 .logo img {
-    height: 50px;
+    height: 60px;
 }
 
 /* Section Hero */
@@ -55,8 +55,6 @@ header nav ul li a:hover {
     width: 100%;
     height: 500px;
     object-fit: cover;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-    margin-top: 2cm;
 }
 
 .hero-text {
@@ -72,17 +70,22 @@ header nav ul li a:hover {
 }
 
 .cta-button {
-    background-color: #e74c3c;
+    background-color: teal;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     font-size: 1.2em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: gray;
 }
 
 /* Section à propos */
 #about {
-    background-color: #ffffff;
+    background-color: white;
     padding: 50px 20px;
     text-align: center;
 }
@@ -94,41 +97,88 @@ header nav ul li a:hover {
 
 /* Section avec 3 colonnes */
 #features {
-    background-color: #f7f4f4;
+    background-color: black;
     padding: 50px 20px;
 }
 
 .container {
     display: flex;
-    text-align: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .feature {
     text-align: center;
-    width: 20%;
-    background-color: rgb(231, 225, 225);
-    padding: 10px;
-    margin: 20px;
+    color: white;
+    width: 30%;
+    background-color: rebeccapurple;
+    padding: 20px;
+    margin: 10px;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .feature img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .details-button {
-    background-color: #3498db;
+    background-color: teal;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
     margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: gray;
+}
+
+/*albums*/
+.albums-section {
+    padding: 40px;
+    text-align: center;
+    background-color: teal
+}
+
+.albums-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.album {
+    flex: 1 1 calc(25% - 40px); /* Chaque album prend 25% de l'espace avec un écart */
+    max-width: 300px; /* Limite la taille des albums */
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+.album img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.album h3 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+
+.album p {
+    font-size: 0.9em;
+    color: black;
 }
 
 /* Footer */
@@ -181,9 +231,3 @@ footer nav ul li a:hover {
     height: 30px;
     margin: 0 10px;
 }
-
-@media screen and (max-width: 1500px) {
-    header {
-        width: 
-    }
-} 

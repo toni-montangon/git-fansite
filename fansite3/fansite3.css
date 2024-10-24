@@ -1,19 +1,77 @@
+/* Styles par défaut pour les écrans de bureau */
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Styles pour les écrans tablettes et mobiles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .feature {
+        width: 90%; 
+        margin: 10px 0; 
+    }
+
+    #palmares h2 {
+        font-size: 2em; 
+    }
+
+    .palmares-table {
+        font-size: 0.9em; 
+    }
+
+    .palmares-table th, .palmares-table td {
+        padding: 8px; 
+    }
+
+    img {
+        max-width: 100%; 
+        height: auto; 
+    }
+}
+
+/* Styles pour les écrans mobiles */
+@media (max-width: 480px) {
+    header nav ul {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .hero-text h1 {
+        font-size: 2.5em; 
+    }
+
+    .cta-button {
+        font-size: 1em; 
+    }
+
+    img {
+        max-width: 100%; 
+        height: auto; 
+    }
+}
+
 /* Style de base */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #f0f0f0;
 }
 
 header {
-    background-color: #5ce1e6;
+    background-color: red;
     color: white;
-    padding: 11px 0;
-    position: fixed;
+    padding: 10px 0;
     top: 0;
     width: 100%;
     z-index: 5;
+    position: fixed;
 }
 
 header nav {
@@ -37,12 +95,12 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: rgb(255, 75, 75);
+    color: yellow;
     transform: scale(1.1);
 }
 
 .logo img {
-    height: 50px;
+    height: 60px;
 }
 
 /* Section Hero */
@@ -55,8 +113,6 @@ header nav ul li a:hover {
     width: 100%;
     height: 500px;
     object-fit: cover;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-    margin-top: 2cm;
 }
 
 .hero-text {
@@ -72,17 +128,22 @@ header nav ul li a:hover {
 }
 
 .cta-button {
-    background-color: #e74c3c;
-    color: white;
+    background-color: yellow;
+    color: black;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     font-size: 1.2em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: white;
 }
 
 /* Section à propos */
 #about {
-    background-color: #ffffff;
+    background-color: white;
     padding: 50px 20px;
     text-align: center;
 }
@@ -94,42 +155,80 @@ header nav ul li a:hover {
 
 /* Section avec 3 colonnes */
 #features {
-    background-color: #f7f4f4;
+    background-color: darkred;
     padding: 50px 20px;
 }
 
 .container {
     display: flex;
-    text-align: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .feature {
     text-align: center;
-    width: 20%;
-    background-color: rgb(231, 225, 225);
-    padding: 10px;
-    margin: 20px;
+    color: white;
+    width: 30%;
+    background-color: red;
+    padding: 20px;
+    margin: 10px;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .feature img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .details-button {
-    background-color: #3498db;
-    color: white;
+    background-color: yellow;
+    color: black;
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
     margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.details-button:hover {
+    background-color: white;
+}
+
+/*Tableau*/
+#palmares h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.palmares-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.1em;
+    font-family: 'Arial', sans-serif;
+    min-width: 400px;
+    text-align: left;
+    background-color: #f2f2f2;
+}
+
+.palmares-table thead {
+    background-color: #333;
+    color: #fff;
+}
+
+.palmares-table th, .palmares-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.palmares-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
 
 /* Footer */
 footer {
@@ -181,9 +280,3 @@ footer nav ul li a:hover {
     height: 30px;
     margin: 0 10px;
 }
-
-@media screen and (max-width: 1500px) {
-    header {
-        width: 
-    }
-} 
